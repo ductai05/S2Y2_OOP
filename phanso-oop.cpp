@@ -6,11 +6,12 @@ void Student::getInfo(){
 };
 
 // PHANSO
-void PhanSo::inPhanSo(){
+PhanSo PhanSo::inPhanSo(){
     std::cout << PhanSo::tu << " / " << PhanSo::mau << "\n";
+    return *this;
 }
 
-void PhanSo::rutgon(){
+PhanSo PhanSo::rutgon(){
     int a = tu, b = mau;
     while (a * b != 0){
         if (a > b){
@@ -22,34 +23,39 @@ void PhanSo::rutgon(){
     int gcd = a + b;
     tu /= gcd;
     mau /= gcd;
+    return *this;
 }
 
-void PhanSo::cong(PhanSo x){
+PhanSo PhanSo::cong(PhanSo x){
     tu = tu * x.mau + x.tu * mau;
     mau = mau * x.mau;
     rutgon();
     std::cout << "(+)ans: "; inPhanSo();
+    return *this;
 }
 
-void PhanSo::tru(PhanSo x){
+PhanSo PhanSo::tru(PhanSo x){
     tu = tu * x.mau - x.tu * mau;
     mau = mau * x.mau;
     rutgon();
     std::cout << "(-)ans: "; inPhanSo();
+    return *this;
 }
 
-void PhanSo::nhan(PhanSo x){
+PhanSo PhanSo::nhan(PhanSo x){
     tu = tu * x.tu;
     mau = mau * x.mau;
     rutgon();
     std::cout << "(*)ans: "; inPhanSo();
+    return *this;
 }
 
-void PhanSo::chia(PhanSo x){
+PhanSo PhanSo::chia(PhanSo x){
     tu = tu * x.mau;
     mau = mau * x.tu;
     rutgon();
     std::cout << "(/)ans: "; inPhanSo();
+    return *this;
 }
 
 void interact(){
@@ -57,9 +63,9 @@ void interact(){
     PhanSo b(5, 16);
     a.inPhanSo();
     b.inPhanSo();
-    a.cong(b);
-    a.chia(b);
-    a.nhan(a);
+    b = a.cong(b);
+    a.inPhanSo();
+    b.inPhanSo();
 }
 
 int main(){

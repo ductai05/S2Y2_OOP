@@ -19,12 +19,12 @@ private:
     double mau;
 public:
     PhanSo(double a, double b) : tu(a), mau(b) {}
-    void inPhanSo();
-    void rutgon();
-    void cong(PhanSo x);
-    void tru(PhanSo x);
-    void nhan(PhanSo x);
-    void chia(PhanSo x);
+    PhanSo inPhanSo();
+    PhanSo rutgon();
+    PhanSo cong(PhanSo x);
+    PhanSo tru(PhanSo x);
+    PhanSo nhan(PhanSo x);
+    PhanSo chia(PhanSo x);
 };
 
 void interact();
