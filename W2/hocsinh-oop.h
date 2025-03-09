@@ -37,6 +37,7 @@ private:
     unordered_map<int, int> mshs_index;
 public:
     Lop();
+    ~Lop();
     int timHS(int mshs);
     void themHS();
     void suaHS();

@@ -1,11 +1,5 @@
 #include "phanso-oop.h"
-void Student::getInfo(){
-    std::cout << "Name: " << Student::name << "\n";
-    std::cout << "Age: " << Student::age << "\n";
-    std::cout << "Student ID: " << Student::student_id << "\n";
-};
 
-// PHANSO
 PhanSo PhanSo::inPhanSo(){
     std::cout << PhanSo::tu << " / " << PhanSo::mau << "\n";
     return *this;

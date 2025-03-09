@@ -13,6 +13,12 @@ DaThuc::DaThuc(int n, double *a){
     }
 }
 
+DaThuc::~DaThuc(){
+    if (coefficients != NULL){
+        delete[] coefficients;
+    }
+}
+
 void DaThuc::nhapDaThuc(){
     std::cout << "Nhap bac cua da thuc: ";
     std::cin >> degree;
@@ -123,6 +129,12 @@ void interact(){
     cin >> x;
     cout << "Gia tri cua da thuc A tai x = " << x << " la: " << DaThuc::tinhGiaTri(A, x) << "\n";
     cout << "Gia tri cua da thuc B tai x = " << x << " la: " << DaThuc::tinhGiaTri(B, x) << "\n";
+
+    A.~DaThuc();
+    B.~DaThuc();
+    C.~DaThuc();
+    D.~DaThuc();
+    E.~DaThuc();
 }
 
 int main(){

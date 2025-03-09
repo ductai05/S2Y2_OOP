@@ -132,6 +132,14 @@ Lop::Lop(){
     dsHS = vector<HocSinh*>();
 }
 
+Lop::~Lop(){
+    for (HocSinh* hs : dsHS){
+        delete hs;
+    }
+    mshs_index.clear();
+    dsHS.clear();
+}
+
 int Lop::timHS(int mshs){
     for (int i = 0; i < dsHS.size(); i++){
         if (dsHS[i]->info_mshs() == mshs){
@@ -439,6 +447,7 @@ void interact(){
     Lop lop = Lop();
     lop.tuongtac();
     cout << "Hoan thanh Quan li hoc sinh.\n";
+    lop.~Lop();
 }
 
 int main(){

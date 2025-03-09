@@ -12,6 +12,7 @@ private:
 public:
     DaThuc();
     DaThuc(int n, double *a);
+    ~DaThuc();
     void nhapDaThuc();
     void inDaThuc();
     static DaThuc cong(const DaThuc &x, const DaThuc &y);
