@@ -1,3 +1,6 @@
+#ifndef BIGNUM_OOP_H
+#define BIGNUM_OOP_H
+
 #include <iostream>
 #include <cmath>
 
@@ -19,3 +22,5 @@ public:
 };
 
 void interact();
+
+#endif

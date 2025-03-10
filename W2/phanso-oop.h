@@ -1,3 +1,6 @@
+#ifndef PHANSO_OOP_H
+#define PHANSO_OOP_H
+
 #include <iostream>
 
 using namespace std;
@@ -17,3 +20,5 @@ public:
 };
 
 void interact();
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef HOCSINH_OOP_H
+#define HOCSINH_OOP_H
+
 #include <iostream>
 #include <string>
 #include <unordered_map>
@@ -55,3 +58,5 @@ public:
 };
 
 void interact();
+
+#endif

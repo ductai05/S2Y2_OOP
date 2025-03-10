@@ -1,3 +1,6 @@
+#ifndef TAMGIAC_OOP_H
+#define TAMGIAC_OOP_H
+
 #include <iostream>
 #include <cmath>
 
@@ -21,3 +24,5 @@ class TamGiac {
 };
 
 void interact();
+
+#endif

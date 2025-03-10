@@ -1,3 +1,6 @@
+#ifndef DATHUC_OOP_H
+#define DATHUC_OOP_H
+
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -22,3 +25,5 @@ public:
 };
 
 void interact();
+
+#endif
