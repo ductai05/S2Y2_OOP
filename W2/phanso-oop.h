@@ -17,6 +17,11 @@ public:
     PhanSo tru(PhanSo x);
     PhanSo nhan(PhanSo x);
     PhanSo chia(PhanSo x);
+    PhanSo operator+(const PhanSo &x);
+    PhanSo operator++(int); // postfix
+    PhanSo &operator++(); // prefix
+    operator double();
+    // operator int();
 };
 
 void interact();

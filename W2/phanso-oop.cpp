@@ -52,17 +52,49 @@ PhanSo PhanSo::chia(PhanSo x){
     return *this;
 }
 
+PhanSo PhanSo::operator+(const PhanSo &x) {
+    PhanSo ans(0, 1);
+    ans.tu = tu * x.mau + x.tu * mau;
+	ans.mau = mau * x.mau;
+    ans.rutgon();
+	return ans;
+}
+
+PhanSo &PhanSo::operator++(){ // tiento; tham chieu den doi tuong sau khi +
+    tu += mau;
+    return *this;
+}
+
+PhanSo PhanSo::operator++(int){ // hauto; ban sao den doi tuong truoc khi +
+    PhanSo ans = *this;
+    tu += mau;
+    return ans;
+}
+
+// PhanSo::operator double(){
+//     return tu / mau;
+// }
+
+PhanSo::operator double(){
+    return tu / mau;
+} 
+
 void interact(){
+    PhanSo a(27, 17);
+    PhanSo b(5, 16);
+    a.inPhanSo();
+    cout << (long long) (a);
+}
+
+void interact2(){
     PhanSo a(10, 17);
     PhanSo b(5, 16);
     a.inPhanSo();
-    b.inPhanSo();
-    b = a.cong(b);
-    a.inPhanSo();
-    b.inPhanSo();
+    ++(a.inPhanSo());
 }
 
 int main(){
-    interact();
+    interact(); cout << "\n";
+    interact2();
 }
 
